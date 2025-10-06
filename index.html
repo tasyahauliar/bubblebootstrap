@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200">
+  <div class="max-w-6xl mx-auto bg-white min-h-screen shadow-md">
+    
+    <!-- Header -->
+    <header class="p-6 border-b">
+      <h1 class="text-2xl font-bold">Belajar Bootstrap</h1>
+      <p class="text-gray-600">Belajar Membuat Template Website Dengan Bootstrap</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="bg-red-500 text-white px-6 py-2">
+      <ul class="flex space-x-6">
+        <li><button onclick="showSection('home')" class="hover:underline">Home</button></li>
+        <li><button onclick="showSection('form')" class="hover:underline">About Us</button></li>
+        <li><button onclick="showSection('table')" class="hover:underline">Form</button></li>
+      </ul>
+    </nav>
+
+    <!-- Konten -->
+    <div class="p-6">
+      
+      <!-- Halaman Home -->
+      <section id="home" class="grid grid-cols-3 gap-6">
+        <div class="col-span-2 space-y-6">
+          <article class="bg-white p-6 shadow rounded">
+            <h2 class="text-xl font-bold mb-2">Suzuki Masih Fokus Bangun Tim Utama di MotoGP</h2>
+            <p class="text-sm text-gray-500 mb-4">Administrator · Jumat, 22 Februari 2019 – 10:42 WIB</p>
+            <p class="text-gray-700">jpnn.com — Suzuki sudah mengambil langkah untuk menyiapkan tim satelit mereka di MotoGP...</p>
+          </article>
+          <article class="bg-white p-6 shadow rounded">
+            <h2 class="text-xl font-bold mb-2">Piala AFF U-22, Anda Yakin Timnas Indonesia Mampu Kalahkah Kamboja?</h2>
+            <p class="text-sm text-gray-500 mb-4">Administrator · Jumat, 22 Februari 2019 – 10:42 WIB</p>
+            <p class="text-gray-700">jpnn.com, PNOM PENH — Pelatih Timnas Indonesia U-22 Indra Sjafri memastikan bakal menampilkan skuat terbaik...</p>
+          </article>
+        </div>
+        <aside class="bg-white p-6 shadow rounded">
+          <h3 class="text-lg font-bold border-b-4 border-red-500 pb-2 mb-4">Menu</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-blue-600 hover:underline">Olahraga</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Politik</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Hiburan</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Games</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Sepakbola</a></li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Halaman Form -->
+      <section id="form" class="hidden">
+        <form class="space-y-4 max-w-2xl">
+          <div>
+            <label class="block">Nama Depan</label>
+            <input type="text" class="w-full border px-3 py-2 rounded">
+          </div>
+          <div>
+            <label class="block">Nama Belakang</label>
+            <input type="text" class="w-full border px-3 py-2 rounded">
+          </div>
+          <div>
+            <label class="block">Email</label>
+            <input type="email" class="w-full border px-3 py-2 rounded">
+          </div>
+          <div>
+            <label class="block">Password</label>
+            <input type="password" class="w-full border px-3 py-2 rounded">
+          </div>
+          <div>
+            <label class="block">Tanggal Lahir</label>
+            <input type="date" class="w-full border px-3 py-2 rounded">
+          </div>
+          <div>
+            <label class="block">Alamat</label>
+            <textarea class="w-full border px-3 py-2 rounded"></textarea>
+          </div>
+          <div>
+            <label class="block">Jenis Kelamin</label>
+            <div class="flex gap-4 mt-1">
+              <label><input type="radio" name="gender"> Laki-Laki</label>
+              <label><input type="radio" name="gender"> Perempuan</label>
+            </div>
+          </div>
+          <div>
+            <label class="block">Jurusan</label>
+            <select class="w-full border px-3 py-2 rounded">
+              <option>Teknik Informatika</option>
+              <option>Sistem Informasi</option>
+              <option>Teknik Komputer</option>
+            </select>
+          </div>
+          <div>
+            <label class="block">Hobi</label>
+            <div class="flex gap-4 mt-1">
+              <label><input type="checkbox"> Membaca</label>
+              <label><input type="checkbox"> Olahraga</label>
+              <label><input type="checkbox"> Musik</label>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
+            <button type="reset" class="bg-green-500 text-white px-4 py-2 rounded">Kembali</button>
+            <button type="reset" class="bg-yellow-500 text-white px-4 py-2 rounded">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Halaman Table -->
+      <section id="table" class="hidden">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded mb-4">Tambah Data</button>
+        <table class="w-full border">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="border px-4 py-2 text-left">Nama Belakang</th>
+              <th class="border px-4 py-2 text-left">Nama Email</th>
+              <th class="border px-4 py-2 text-left">Jurusan</th>
+              <th class="border px-4 py-2 text-left">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">Andi Purnomo</td>
+              <td class="border px-4 py-2">andy@umm.ac.id</td>
+              <td class="border px-4 py-2">Teknik Informatika</td>
+              <td class="border px-4 py-2 space-x-2">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Edit</button>
+                <button class="bg-blue-500 text-white px-2 py-1 rounded">Detail</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Hapus</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Bagus Wardana</td>
+              <td class="border px-4 py-2">bagus@umm.ac.id</td>
+              <td class="border px-4 py-2">Teknik Informatika</td>
+              <td class="border px-4 py-2 space-x-2">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Edit</button>
+                <button class="bg-blue-500 text-white px-2 py-1 rounded">Detail</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Hapus</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center p-4 text-sm text-gray-500">
+      &copy; 2015 onphpid.com
+    </footer>
+  </div>
+
+  <!-- Script untuk navigasi -->
+  <script>
+    function showSection(section) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(section).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
